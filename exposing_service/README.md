@@ -9,6 +9,7 @@ Execute following commands to verify
 % kubectl get svc my-nginx
 
 % kubectl describe svc my-nginx
+
 Name:                     my-nginx
 Namespace:                default
 Labels:                   run=my-nginx
@@ -29,8 +30,12 @@ Events:                   <none>
 NAME       TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
 my-nginx   NodePort   10.100.108.67   <none>        80:30175/TCP   30m
 
+The IP address in the EXTERNAL-IP column is the one that is available on the public internet. 
+The CLUSTER-IP is only available inside your cluster/private cloud network.
+
 # Use the localport 30175 to access the nginx server
 $ curl localhost:30175
-or use browser "http://localhost:30175
+or 
+use browser "http://localhost:30175
 
 
